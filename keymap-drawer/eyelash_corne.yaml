@@ -1,10 +1,10 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
+  BASE:
+  - RAISE
+  - DROP
+  - NAV
+  - GAME
   - R
   - T
   - $$mdi:arrow-up-bold$$
@@ -44,13 +44,13 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - LGUI
-  - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - {t: '$$mdi:backspace$$', h: Fn}
-  - '&lt 2'
+  - {t: '$$mdi:keyboard-space$$', h: RAISE}
+  - {t: '$$mdi:keyboard-return$$', h: NAV}
+  - {t: '$$mdi:backspace$$', h: NAV}
+  - {t: '$$mdi:keyboard-space$$', h: DROP}
   - $$mdi:apple-keyboard-option$$
-  NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
+  RAISE:
+  - {type: held}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -93,14 +93,14 @@ layers:
   - END
   - PG DN
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  SYMBOL:
+  DROP:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '!'
+  - {t: '!', type: held}
   - '@'
   - '#'
   - $
@@ -145,12 +145,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  Fn:
+  NAV:
   - '&studio_unlock'
   - F1
-  - F2
+  - {t: F2, type: held}
   - F3
   - F4
   - F5
@@ -192,7 +192,56 @@ layers:
   - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  GAME:
+  - RAISE
+  - DROP
+  - NAV
+  - {t: GAME, type: held}
+  - R
+  - T
+  - $$mdi:arrow-up-bold$$
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&td0'
+  - A
+  - S
+  - D
+  - F
+  - G
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:arrow-right-bold$$
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - $$mdi:keyboard-space$$
+  - $$mdi:arrow-down-bold$$
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - $$mdi:keyboard-esc$$
+  - LGUI
+  - {t: '$$mdi:keyboard-space$$', h: RAISE}
+  - {t: '$$mdi:keyboard-return$$', h: NAV}
+  - {t: '$$mdi:backspace$$', h: NAV}
+  - {t: '$$mdi:keyboard-space$$', h: DROP}
+  - $$mdi:apple-keyboard-option$$
