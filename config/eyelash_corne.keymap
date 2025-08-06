@@ -41,6 +41,20 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp CAPS>;
         };
+
+        sp_und: sp_und {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp CAPS>;
+        };
+    };
+
+    hold_tap_defaults {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "balanced";       // Or "tap-preferred" if you're missing taps
+        tapping-term-ms = <250>;   // Default is 200 ms – increase for slower tapping
+        quick-tap-ms = <0>;        // Optional, used for quick-tap detection
     };
 
     rgb_encoder: rgb_encoder {
@@ -63,10 +77,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-            &td0            &kp Q       &kp W       &kp E       &kp R       &kp T                                   &kp UP                  &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
-            &td1            &kp A       &kp S       &kp D       &kp F       &kp G                        &kp LEFT   &kp ENTER  &kp RIGHT    &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-            &kp LCTRL       &kp Z       &kp X       &kp C       &kp V       &kp B       &kp SPACE                   &kp DOWN                &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
-                                                    &kp LGUI    &lt 1 SPACE &lt 3 ENTER                                                     &lt 3 BSPC  &lt 2 SPACE &kp RALT
+&td0            &kp Q           &kp W       &kp F       &kp P           &kp B                               &kp UP                  &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &to 4
+&td1            &kp A           &kp R       &kp S       &mt LSHIFT T    &kp G                   &kp LEFT    &kp ENTER  &kp RIGHT    &kp M       &mt RSHIFT N    &kp E           &kp I           &kp O           &kp SQT
+&kp LCTRL       &mt LEFT_GUI Z  &mt LALT X  &mt LCTRL C &kp D           &kp V       &kp SPACE               &kp DOWN                &kp K       &kp H           &mt RCTRL COMMA &mt RALT DOT    &kp RGUI FSLH   &kp BSLH
+                                            &kp LGUI    &lt 1 SPACE     &lt 3 ENTER                                                 &lt 3 BSPC  &lt 2 SPACE     &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -74,24 +88,24 @@
         };
 
         lower_layer {
-            display-name = "RAISE";
+            display-name = "DROP";
             bindings = <
             &trans      &kp N1           &kp N2             &kp N3          &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
             &trans      &bt BT_CLR_ALL   &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
             &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON     &trans          &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                                            &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+                                                                            &trans        &trans        &trans                                                                          &kp INS          &kp UNDERSCORE          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
-            display-name = "DROP";
+            display-name = "RAISE";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+                                    &trans     &kp MINUS     &kp SPACE                                                             &kp RET    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -112,7 +126,7 @@
         layer_4 {
             display-name = "GAME";
             bindings = <
-            &mo 1           &mo 2       &mo 3       &mo 4       &kp R       &kp T                                   &kp UP                  &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
+            &mo 1           &mo 2       &mo 3       &mo 4       &kp R       &kp T                                   &kp UP                  &kp Y       &kp U       &kp I       &kp O       &kp P       &to 0
             &td0            &kp A       &kp S       &kp D       &kp F       &kp G                        &kp LEFT   &kp ENTER  &kp RIGHT    &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
             &kp LCTRL       &kp Z       &kp X       &kp C       &kp V       &kp B       &kp SPACE                   &kp DOWN                &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
                                                     &kp LGUI    &lt 1 SPACE &lt 3 ENTER                                                     &lt 3 BSPC  &lt 2 SPACE &kp RALT
