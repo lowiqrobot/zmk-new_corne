@@ -41,6 +41,13 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp CAPS>;
         };
+
+        td_to1_to4: td_to1_to4 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Toggle layer 1/4 Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&to 4>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -63,9 +70,9 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&td0    &kp Q           &kp W       &kp F       &kp P           &kp B                               &kp UP                  &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &to 4
+&td0    &kp Q           &kp W       &kp F       &kp P           &kp B                               &kp UP                  &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &td_to1_to4
 &td1    &kp A           &kp R       &kp S       &mt LSHIFT T    &kp G                   &kp LEFT    &kp ENTER  &kp RIGHT    &kp M       &mt RSHIFT N    &kp E           &kp I           &kp O           &kp SQT
-&to 1   &mt LEFT_GUI Z  &mt LALT X  &mt LCTRL C &kp D           &kp V       &kp C_MUTE               &kp DOWN                &kp K       &kp H           &mt RCTRL COMMA &mt RALT DOT    &mt RGUI FSLH   &kp BSLH
+&to 2   &mt LEFT_GUI Z  &mt LALT X  &mt LCTRL C &kp D           &kp V       &kp C_MUTE               &kp DOWN                &kp K       &kp H           &mt RCTRL COMMA &mt RALT DOT    &mt RGUI FSLH   &kp BSLH
                                     &kp DEL     &lt 1 SPACE     &lt 3 ENTER                                                 &kp BSPC  &lt 2 SPACE     &kp RALT
             >;
 
@@ -75,10 +82,10 @@
         lower_layer {
             display-name = "DROP";
             bindings = <
-&trans  &kp N1           &kp N2             &kp N3          &kp N4        &kp N5                                         &mmv MOVE_UP                       &trans &kp HOME         &kp UP             &kp END           &kp N9           &kp N0
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT    &trans &kp LEFT         &kp DOWN           &kp RIGHT       &kp HOME  &kp PG_UP
-&to 0   &rgb_ug RGB_OFF  &rgb_ug RGB_ON     &trans          &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                     &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                            &trans          &trans        &trans                                                                            &kp MINUS        &kp UNDERSCORE     &trans
+&trans  &kp N1           &kp N2             &kp N3          &kp N4        &kp N5                                         &mmv MOVE_UP                       &trans          &kp HOME         &kp UP             &kp END         &kp N9    &to 0
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT    &trans          &kp LEFT         &kp DOWN           &kp RIGHT       &kp HOME  &kp PG_UP
+&to 0   &rgb_ug RGB_OFF  &rgb_ug RGB_ON     &trans          &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                     &rgb_ug RGB_EFR &rgb_ug RGB_SPI  &rgb_ug RGB_BRI    &rgb_ug RGB_BRD &kp END   &kp PG_DN
+                                            &trans          &trans        &trans                                                                            &kp MINUS       &kp UNDERSCORE   &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
