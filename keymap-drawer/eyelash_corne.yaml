@@ -13,7 +13,7 @@ layers:
   - U
   - Y
   - {t: ;, s: ':'}
-  - {t: GAME, h: toggle}
+  - '&td_to1_to4'
   - '&td1'
   - A
   - R
@@ -29,7 +29,7 @@ layers:
   - I
   - O
   - {t: '''', s: '"'}
-  - {t: DROP, h: toggle}
+  - {t: RAISE, h: toggle}
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
@@ -62,7 +62,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - END
   - {t: '9', s: (}
-  - {t: '0', s: )}
+  - {t: BASE, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
