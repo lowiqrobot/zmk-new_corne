@@ -46,7 +46,7 @@ layers:
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: DROP}
   - {t: '$$mdi:keyboard-return$$', h: NAV}
-  - {t: '$$mdi:backspace$$', h: NAV}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: RAISE}
   - $$mdi:apple-keyboard-option$$
   DROP:
@@ -101,9 +101,9 @@ layers:
   RAISE:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
-  - '@'
-  - '#'
-  - $
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
   - '%'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - ^
@@ -114,9 +114,9 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
   - '&mkp MB4'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -129,9 +129,9 @@ layers:
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
-  - OUT BLE
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -141,7 +141,7 @@ layers:
   - '}'
   - '|'
   - '~'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
   - {t: '-', s: _}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -193,7 +193,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   GAME:
