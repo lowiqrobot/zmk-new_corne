@@ -50,13 +50,6 @@
         };
     };
 
-    hold_tap_defaults {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "balanced";       // Or "tap-preferred" if you're missing taps
-        tapping-term-ms = <250>;   // Default is 200 ms – increase for slower tapping
-        quick-tap-ms = <0>;        // Optional, used for quick-tap detection
-    };
-
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
