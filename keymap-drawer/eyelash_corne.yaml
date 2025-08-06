@@ -29,13 +29,13 @@ layers:
   - I
   - O
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - {t: DROP, h: toggle}
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
   - D
   - V
-  - $$mdi:keyboard-space$$
+  - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
   - K
   - H
@@ -43,7 +43,7 @@ layers:
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: /, h: RGUI, s: '?'}
   - {t: \, s: '|'}
-  - LGUI
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-space$$', h: DROP}
   - {t: '$$mdi:keyboard-return$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -57,9 +57,9 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -74,11 +74,11 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-right-bold$$
   - $$mdi:arrow-right-bold$$
   - HOME
   - PG UP
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: BASE, h: toggle}
   - RGB OFF
   - RGB ON
   - {t: '$$mdi:transfer$$', type: trans}
@@ -95,7 +95,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - INS
+  - {t: '-', s: _}
   - _
   - {t: '$$mdi:transfer$$', type: trans}
   RAISE:
@@ -141,10 +141,10 @@ layers:
   - '}'
   - '|'
   - '~'
+  - {t: ., s: '>'}
   - {t: '0', s: )}
-  - {t: '-', s: _}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   NAV:
