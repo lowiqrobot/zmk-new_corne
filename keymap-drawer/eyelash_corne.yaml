@@ -41,7 +41,7 @@ layers:
   - H
   - {t: ',', h: '$$mdi:apple-keyboard-control$$', s: <}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
-  - RGUI FSLH
+  - {t: /, h: RGUI, s: '?'}
   - {t: \, s: '|'}
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: DROP}
