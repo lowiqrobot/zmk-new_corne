@@ -63,10 +63,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&td0            &kp Q           &kp W       &kp F       &kp P           &kp B                               &kp UP                  &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &to 4
-&td1            &kp A           &kp R       &kp S       &mt LSHIFT T    &kp G                   &kp LEFT    &kp ENTER  &kp RIGHT    &kp M       &mt RSHIFT N    &kp E           &kp I           &kp O           &kp SQT
-&kp LCTRL       &mt LEFT_GUI Z  &mt LALT X  &mt LCTRL C &kp D           &kp V       &kp SPACE               &kp DOWN                &kp K       &kp H           &mt RCTRL COMMA &mt RALT DOT    &mt RGUI FSLH   &kp BSLH
-                                            &kp LGUI    &lt 1 SPACE     &lt 3 ENTER                                                 &kp BSPC  &lt 2 SPACE     &kp RALT
+&td0    &kp Q           &kp W       &kp F       &kp P           &kp B                               &kp UP                  &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &to 4
+&td1    &kp A           &kp R       &kp S       &mt LSHIFT T    &kp G                   &kp LEFT    &kp ENTER  &kp RIGHT    &kp M       &mt RSHIFT N    &kp E           &kp I           &kp O           &kp SQT
+&to 1   &mt LEFT_GUI Z  &mt LALT X  &mt LCTRL C &kp D           &kp V       &kp C_MUTE               &kp DOWN                &kp K       &kp H           &mt RCTRL COMMA &mt RALT DOT    &mt RGUI FSLH   &kp BSLH
+                                    &kp DEL     &lt 1 SPACE     &lt 3 ENTER                                                 &kp BSPC  &lt 2 SPACE     &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -75,10 +75,10 @@
         lower_layer {
             display-name = "DROP";
             bindings = <
-            &trans      &kp N1           &kp N2             &kp N3          &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-            &trans      &bt BT_CLR_ALL   &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-            &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON     &trans          &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                                            &trans        &trans        &trans                                                                          &kp INS          &kp UNDERSCORE          &trans
+&trans  &kp N1           &kp N2             &kp N3          &kp N4        &kp N5                                         &mmv MOVE_UP                       &kp HOME         &kp UP             &kp END           &kp N9           &kp N0    &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT    &kp LEFT         &kp DOWN           &kp RIGHT        &kp RIGHT        &kp HOME  &kp PG_UP
+&to 0   &rgb_ug RGB_OFF  &rgb_ug RGB_ON     &trans          &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                     &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                                            &trans          &trans        &trans                                                                            &kp MINUS        &kp UNDERSCORE     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -87,10 +87,10 @@
         raise_layer {
             display-name = "RAISE";
             bindings = <
-&trans  &kp EXCL        &kp N7  &kp N8  &kp N9      &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR      &kp N4  &kp N5  &kp N6      &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB    &kp N1  &kp N2  &kp N3      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                &kp N0  &kp MINUS   &kp SPACE                                                             &kp RET    &trans     &trans
+&trans  &kp EXCL        &kp N7  &kp N8  &kp N9  &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &bt BT_CLR      &kp N4  &kp N5  &kp N6  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &out OUT_USB    &kp N1  &kp N2  &kp N3  &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                &kp DOT &kp N0  &trans                                                                &kp BSPC   &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
