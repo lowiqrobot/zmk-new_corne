@@ -45,19 +45,19 @@ layers:
   - {t: \, s: '|'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-space$$', h: DROP}
-  - {t: '$$mdi:keyboard-return$$', h: NAV}
+  - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: RAISE}
   - $$mdi:apple-keyboard-option$$
   DROP:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - ^
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -143,12 +143,12 @@ layers:
   - '~'
   - {t: ., s: '>'}
   - {t: '0', s: )}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '=', s: +}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  NAV:
-  - '&studio_unlock'
+  FN:
+  - F12
   - F1
   - F2
   - F3
@@ -177,11 +177,11 @@ layers:
   - PRINTSCREEN
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
+  - UNDO
+  - CUT
+  - COPY
+  - REDO
+  - PASTE
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -199,7 +199,7 @@ layers:
   GAME:
   - DROP
   - RAISE
-  - NAV
+  - FN
   - GAME
   - R
   - T
@@ -241,7 +241,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: DROP}
-  - {t: '$$mdi:keyboard-return$$', h: NAV}
-  - {t: '$$mdi:backspace$$', h: NAV}
+  - {t: '$$mdi:keyboard-return$$', h: FN}
+  - {t: '$$mdi:backspace$$', h: FN}
   - {t: '$$mdi:keyboard-space$$', h: RAISE}
   - $$mdi:apple-keyboard-option$$
