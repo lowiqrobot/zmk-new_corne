@@ -1,55 +1,55 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
-  - $$mdi:keyboard-tab$$
+  CLMK-DH:
+  - $$mdi:keyboard-esc$$
   - Q
   - W
-  - E
-  - R
-  - T
-  - $$mdi:arrow-up-bold$$
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td0'
-  - A
-  - S
-  - D
   - F
+  - P
+  - B
+  - $$mdi:arrow-up-bold$$
+  - J
+  - L
+  - U
+  - Y
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-tab$$
+  - A
+  - {t: R, h: symbols}
+  - S
+  - T
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - M
+  - N
+  - E
+  - {t: I, h: symbols}
+  - O
+  - '&digraph_IJ'
+  - $$mdi:backspace-reverse-outline$$
   - Z
-  - X
-  - C
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
   - V
-  - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - K
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ',', h: '$$mdi:apple-keyboard-control$$', s: <}
+  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - LGUI
-  - NUMBER
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - SYMBOL
-  - $$mdi:apple-keyboard-option$$
-  NUMBER:
+  - Navigation
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', h: symbols}
+  - {t: '$$mdi:backspace$$', h: symbols}
+  - $$mdi:keyboard-space$$
+  - Numbers & math
+  Navigation:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -92,13 +92,13 @@ layers:
   - RGB BRD
   - END
   - PG DN
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  SYMBOL:
+  Numbers & math:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - '@'
@@ -145,7 +145,56 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  symbols:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - '&studio_unlock'
@@ -192,8 +241,8 @@ layers:
   - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
