@@ -76,8 +76,8 @@
         base {
             display-name = "CLMK-DH";
             bindings = <
-&kp ESCAPE  &kp Q       &kp W           &kp F        &kp P             &kp B                               &kp UP                &kp Y            &kp L        &kp U            &kp J              &kp SINGLE_QUOTE  &kp BSPC
-&kp TAB     &kp A       &lt 4 R         &kp S        &kp T             &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp M            &kp N        &kp E            &lt 4 I            &kp O             &digraph_IJ
+&kp ESCAPE  &kp Q       &kp W           &kp F        &kp P             &kp B                               &kp UP                &kp J            &kp L        &kp U            &kp Y              &kp SINGLE_QUOTE  &kp BSPC
+&kp TAB     &kp A       &lt 3 R         &kp S        &kp T             &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp M            &kp N        &kp E            &lt 3 I            &kp O             &digraph_IJ
 &kp DEL     &mt LWIN Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT D  &kp V        &kp SPACE              &kp DOWN              &kp K            &mt RSHFT H  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt RWIN FSLH     &kp ESC
                                         &mo 6        &kp SPACE         &lt 4 ENTER                                               &lt 4 BACKSPACE  &kp SPACE    &mo 1
             >;
@@ -108,7 +108,7 @@
 &trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &trans          &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp QUESTION       &trans
 &trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND            &trans  &trans  &trans  &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DOUBLE_QUOTES  &trans
 &trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans            &trans          &kp AT     &kp COLON             &kp COMMA              &kp DOT     &kp SINGLE_QUOTE   &trans
-                                  &trans            &trans             &trans                                           &trans     &kp UNDER             &trans
+                                  &trans            &kp MINUS          &trans                                           &trans     &kp UNDER             &trans
             >;
 
             label = "symbols";
