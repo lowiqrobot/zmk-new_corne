@@ -16,7 +16,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
   - A
-  - {t: R, h: symbols}
+  - {t: R, h: SYMBOL}
   - S
   - T
   - G
@@ -26,7 +26,7 @@ layers:
   - M
   - N
   - E
-  - {t: I, h: symbols}
+  - {t: I, h: SYMBOL}
   - O
   - '&digraph_IJ'
   - $$mdi:backspace-reverse-outline$$
@@ -42,14 +42,14 @@ layers:
   - {t: ',', h: '$$mdi:apple-keyboard-control$$', s: <}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: /, h: RWIN, s: '?'}
-  - nav-niri
-  - nav-niri
+  - NAV
+  - NAV
   - $$mdi:keyboard-space$$
   - RETURN
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
-  - num-fn
-  nav-niri:
+  - NUM-FN
+  NAV:
   - Ctl+Sft+1
   - Ctl+Gui+1
   - Ctl+Gui+$$mdi:arrow-down-bold$$
@@ -98,7 +98,7 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
-  num-fn:
+  NUM-FN:
   - ^
   - '*'
   - {t: '7', s: '&'}
@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  symbols:
+  SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - <
