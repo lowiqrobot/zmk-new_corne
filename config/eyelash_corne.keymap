@@ -76,10 +76,10 @@
         base {
             display-name = "CLMK-DH";
             bindings = <
-&kp ESCAPE  &kp Q       &kp W           &kp F        &kp P             &kp B                               &kp UP                &kp J            &kp L        &kp U            &kp Y              &kp SINGLE_QUOTE  &kp BSPC
-&kp TAB     &kp A       &lt 3 R         &kp S        &kp T             &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp M            &kp N        &kp E            &lt 3 I            &kp O             &digraph_IJ
-&kp DEL     &mt LWIN Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT D  &kp V        &kp SPACE              &kp DOWN              &kp K            &mt RSHFT H  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt RWIN FSLH     &kp ESC
-                                        &mo 1        &kp SPACE         &lt 4 ENTER                                               &lt 4 BACKSPACE  &kp SPACE    &mo 2
+&kp ESCAPE  &kp Q       &kp W           &kp F        &kp P             &kp B                                    &mmv MOVE_UP                     &kp J          &kp L        &kp U            &kp Y              &kp SINGLE_QUOTE  &kp BSPC
+&kp TAB     &kp A       &lt 3 R         &kp S        &kp T             &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp M          &kp N        &kp E            &lt 3 I            &kp O             &digraph_IJ
+&kp DEL     &mt LWIN Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT D  &kp V       &kp SPACE                    &mmv MOVE_DOWN                   &kp K          &mt RSHFT H  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &mt RWIN FSLH     &mo 1
+                                        &mo 1        &kp SPACE         &kp RETURN                                                                &kp BACKSPACE  &kp SPACE    &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -87,19 +87,19 @@
 
         nav-niri {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mkp MB4  &mkp MB5
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp HOME  &kp PAGE_UP
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp END   &kp PAGE_DOWN
-                        &trans  &trans  &trans                                    &mkp RCLK       &mkp LCLK       &mkp MCLK
+&kp LC(LS(NUMBER_1))  &kp LC(LG(NUMBER_1))  &kp LC(LG(DOWN))  &kp LC(LG(F))  &kp LG(LC(UP_ARROW))  &trans                    &trans          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mkp MB4  &mkp MB5
+&kp LC(LS(NUMBER_2))  &kp LC(LG(NUMBER_2))  &kp LG(MINUS)     &kp LG(R)      &kp LG(PLUS)          &trans            &trans  &trans  &trans  &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp HOME  &kp PAGE_UP
+&kp LS(LC(NUMBER_3))  &kp LC(LG(NUMBER_3))  &kp LC(LG(LEFT))  &kp LG(C)      &kp LC(LG(RIGHT))     &trans  &trans            &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp END   &kp PAGE_DOWN
+                                                              &trans         &trans                &trans                                    &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
         num-fn {
             bindings = <
-&trans  &kp STAR     &kp N7        &kp N8        &kp N9        &kp MINUS                    &trans          &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &kp SLASH    &kp NUMBER_4  &kp N5        &kp N6        &kp PLUS             &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &kp PERCENT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans            &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                                   &kp DOT       &kp N0        &kp ENTER                                    &trans  &trans  &trans
+&kp CARET         &kp STAR     &kp N7        &kp N8        &kp N9        &kp MINUS                    &trans          &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&kp GREATER_THAN  &kp SLASH    &kp NUMBER_4  &kp N5        &kp N6        &kp PLUS             &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&kp LESS_THAN     &kp PERCENT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans            &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                             &kp DOT       &kp N0        &kp ENTER                                    &trans  &trans  &trans
             >;
         };
 
